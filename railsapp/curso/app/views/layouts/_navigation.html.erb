@@ -1,0 +1,25 @@
+<%= link_to "home","",:class => 'brand'%>
+<ul class="nav nav-pills ">
+	<!-- if user_signed_in? %> -->
+	<li class="active">
+		<%= link_to('Meterias', materias_path) %>
+
+	</li>
+	<li>
+	    <%= link_to('logout', "#",:method=>'delete')%>
+	</li>
+	<!--else%)-->
+	<li>
+	    <%= link_to('login',"") %>
+	</li>
+	<!--end%>-->
+	<!--if user_signed_in?%>-->
+	<li>
+	    <%= link_to('Cursos',asignaturas_path)%>
+	</li>
+	<!--else%)-->
+	<li>
+	    <%= link_to('Instructores',instructores_path)%>
+	</li>
+	<!--end%>-->
+</ul>

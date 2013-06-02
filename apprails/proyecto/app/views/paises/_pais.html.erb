@@ -1,0 +1,11 @@
+<tr id=<%= "pais_#{pais.id}" %>>
+  <td><%= pais.nombre %></td>
+  <td>
+    <%= link_to 'Mostrar', pais, :remote => true, :class => 'btn btn-mini' %>
+    <%= link_to 'Editar', edit_pais_path(pais), :remote => true,
+        :class => 'btn btn-mini' %>
+    <%= link_to 'Eliminar', pais, 
+        :data => { :confirm => 'Esta Seguro?' },
+        :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
+  </td>
+</tr>

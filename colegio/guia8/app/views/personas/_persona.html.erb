@@ -1,0 +1,18 @@
+<tr id=<%= "persona_#{persona.id}" %>>
+
+  <td><%= persona.nombre %></td>
+  <td><%= persona.identificacion %></td>
+  <td><%= persona.email %></td>
+  <td><%= persona.fch_ncto %></td>
+  <td><%= persona.telefono %></td>
+  <td><%= persona.municipio.nombre %></td>
+
+  <td>
+    <%= link_to 'Mostrar', persona, :remote => true, :class => 'btn btn-mini' %>
+    <%= link_to 'Editar', edit_persona_path(persona), :remote => true,
+        :class => 'btn btn-mini' %>
+    <%= link_to 'Eliminar', persona, 
+        :data => { :confirm => 'Esta Seguro?' },
+        :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
+  </td>
+</tr>

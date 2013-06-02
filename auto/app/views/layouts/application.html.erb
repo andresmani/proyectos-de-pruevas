@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Auto</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "autocomplete-rails.js" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%=link_to "producs", products_path%>
+<%=link_to "brands", brands_path %>
+<br><br>
+<%= yield %>
+
+</body>
+</html>

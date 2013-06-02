@@ -1,0 +1,10 @@
+scaffold sin css 
+
+rails g scaffold instructor nombres:string apellidos:string cedula:string email:string direccion:string telefono:string fch_ncto:date modalidad:string --skip-stylesheets
+
+
+instalar bootstrap para el escaffold
+rails g bootstrap:install
+
+crear las vistaas conn simple form
+rails g bootstrap:themed teams -f

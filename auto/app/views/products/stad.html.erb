@@ -1,0 +1,11 @@
+
+<center>
+ <%= image_tag(Gchart.pie_3d(:size => '700x400',
+  :title => "Curva De Ventas",
+  :bg => 'efefef',
+  :line_colors => '0077CC,00CC77',
+  :legend => @tp_k.keys,
+  :data => @tp_k.values	 ,
+  :axis_with_labels => 'x,y',
+  :axis_labels => [@tp_k.values])) %>
+ </center>	

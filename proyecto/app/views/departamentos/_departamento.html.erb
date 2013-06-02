@@ -1,0 +1,12 @@
+<tr id=<%= "departamento_#{departamento.id}" %>>
+  <td><%= departamento.nombre %></td>
+  <td><%= departamento.pais.nombre %></td>
+  <td>
+    <%= link_to 'Mostrar', departamento, :remote => true, :class => 'btn btn-mini' %>
+    <%= link_to 'Editar', edit_departamento_path(departamento), :remote => true,
+        :class => 'btn btn-mini' %>
+    <%= link_to 'Eliminar', departamento, 
+        :data => { :confirm => 'Esta Seguro?' },
+        :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
+  </td>
+</tr>

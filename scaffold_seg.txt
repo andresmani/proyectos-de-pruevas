@@ -1,0 +1,5 @@
+vendedor (seller):
+
+rails g scaffold seller name:string document:string
+
+rails g scaffold product name:string code:string

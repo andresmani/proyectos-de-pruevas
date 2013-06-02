@@ -1,0 +1,30 @@
+<%- model_class = Colegio -%>
+<div class="page-header">
+  <h1>Colegios</h1>
+</div>
+ <div class="row">
+    <div class="span2"> 
+</div>
+<div class="span10">
+<table class="table table-hover table-bordered table-condensed pretty">
+  <thead>
+    <tr >
+       <th>id</th>
+       <th>Nombre</th>
+       <th>Dirrecion</th>
+       <th>Telefono</th>
+    </tr>
+  </thead>
+  <tbody>
+     <%= render @colegios %>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td><%= link_to image_tag('nuevo.png', :tile  => "Mostrar Equipos"),  new_colegio_path,  :remote => true %></td>
+   
+    </tr>
+  </tfoot>
+</table>
+</div>
+
+  

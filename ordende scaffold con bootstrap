@@ -1,0 +1,9 @@
+1)rails g simple_form:install --bootstrap
+2)rails g bootstrap:install
+
+repetir en cada scaffold 
+3)rails g scaffold nombre campo:tipo --skip-stylesheets
+4)rake db:miggrate
+5)rails g bootstrap:themed scaffold(s)<- scaffold en plural -f
+
+rails s	

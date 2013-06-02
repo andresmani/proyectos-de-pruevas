@@ -1,0 +1,3 @@
+ rails g scaffold brand name:string
+
+rails g scaffold Product name:string  brands:references

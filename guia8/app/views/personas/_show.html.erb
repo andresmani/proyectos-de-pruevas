@@ -1,0 +1,12 @@
+<%- model_class = persona -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
+
+<div class='persona'>
+  <p>	<%= @persona.nombre %></p>
+  <p><%= @persona.identificacion %></p>
+  <p><%= @persona.email %></p>
+  <p><%= @persona.fch_ncto %></p>
+  <p><%= @persona.municipio_nombre %></p>
+</div>

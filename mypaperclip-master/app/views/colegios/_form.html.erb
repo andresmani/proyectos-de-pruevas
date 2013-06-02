@@ -1,0 +1,14 @@
+<%= simple_form_for(@colegio, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
+
+<%= f.error_notification %>
+  <%= display_base_errors @colegio %>
+
+  <%= f.input :nombre %>
+  <%= f.input :direccion %>
+  <%= f.input :telefono %>
+ 	
+  	<div class="form-actions">
+	    <%= f.submit "guardar", :class => 'btn btn-primary' %>
+	    <%= link_to 'Atras', colegios_path, :class => 'btn btn-small' %>
+  	</div>
+<% end %>

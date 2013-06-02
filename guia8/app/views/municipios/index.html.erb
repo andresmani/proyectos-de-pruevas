@@ -1,0 +1,40 @@
+<%- model_class = Municipio -%>
+<div class="page-header">
+<br>
+<center><h1>Municipio</h1></center>
+ <%= form_tag request.path, :method => 'get' do %>
+    Municipio a Buscar:
+    <div class="input-append">
+      <%= search_field_tag :search, params[:search],  options={:class=>"span2", :placeholder => "Municipio"} %>
+      <%= submit_tag "Consultar",options={ :class => "btn btn-inverse", :name => nil} %>
+    </div>
+    <p>numero de registros:
+   <p><%= text_field_tag :registro, params[:registro], options={:class=>"span1"} %></p>
+    <%= hidden_field_tag :direction, params[:direction] %>
+  <%= hidden_field_tag :sort, params[:sort] %>
+    <% end %>
+
+</div>
+<table class="table table-striped table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Departamento</th>
+      <th>acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+     <%= render @municipios %>
+  </tbody>
+</table>
+<td><%= link_to 'Nuevo municipio', new_municipio_path, :remote => true, :class=>"btn btn-inverse" %>
+</td>
+<div class="pagination pagination-centered">
+  <ul>
+    <%= will_paginate @municipios, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
+    &raquo;' %>
+  </ul>
+<p >
+Total departamentos :<input type="text"  id="totalregs" class="span1" value="<%= @municipios.total_entries %>" readonly />
+</p>
+</div>

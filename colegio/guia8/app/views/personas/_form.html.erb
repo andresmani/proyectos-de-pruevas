@@ -1,0 +1,21 @@
+
+<%= simple_form_for(@persona, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
+
+  <%= f.error_notification %>
+  
+
+  <%= f.input :nombre, :label => "Nombre",  :required => true %>
+  <%= f.input :identificacion, :label => "Identificacion",  :required => true %>
+  <%= f.input :email, :label => "Email",  :required => true %>
+  <%= f.input :fch_ncto, :label => "Fch_ncto",  :required => true %>
+  <%= f.input :telefono, :label => "Telefono",  :required => true %>
+  
+
+  <%= f.input :municipio_nombre, :url => autocomplete_municipio_nombre_personas_path, :as =>
+  :autocomplete %>
+  
+  <div class="form-actions">
+    <%= f.submit "guardar", :class => 'btn btn-primary' %>
+    <%= link_to 'Atras', personas_path, :class => 'btn btn-small' %>
+  </div>
+<% end %>

@@ -1,0 +1,20 @@
+scaffolds de guia 8
+
+
+
+rails generate scaffold pais nombre:string  --skip-stylesheets
+
+rails generate scaffold departamento nombre:string pais:references --skip-stylesheets
+
+rails generate scaffold municipio nombre:string departamento:references --skip-stylesheets
+
+ojoooooo: donde va ubicación??????????................
+
+rails generate scaffold persona nombre:string identificacion:string email:string fch_ncto:date telefono:string municipio:references --skip-stylesheets
+
+
+
+
+
+
+

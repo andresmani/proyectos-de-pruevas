@@ -1,0 +1,56 @@
+1)rails g simple_form:install --bootstrap
+2)rails g bootstrap:install
+
+repetir en cada scaffold 
+3)rails g scaffold nombre campo:tipo --skip-stylesheets
+4)rake db:miggrate
+5)rails g bootstrap:themed scaffold(s)<- scaffold en plural -f
+
+
+nuevo modo
+----------------------------------------
+rails g scaffold cartelera mensaje:text --skip-stylesheets
+- migro
+rails g bootstrap:themed carteleras -f
+
+
+
+-------------------------------------------
+rails s	
+scaffolds parents
+------------------------------------------------
+rails g scaffold tdocumento nombre:string --skip-stylesheets
+- migrar
+rails g bootstrap:themed tdocumentos -f
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+rails g scaffold programa nombre:string codigo:string --skip-stylesheets
+
+rails g bootstrap:themed programas -f
+
+------------------------------------------------
+................................................
+
+scaffolds girls
+------------------------------------------------
+rails g scaffold estudiante nombre:string apellido:string telefono:string programa:references tdocumento:references documento:string --skip-stylesheets
+document_type
+- migrar
+rails g bootstrap:themed estudiantes -f
+------------------------------------------------
+................................................
+
+scaffolds separate 
+------------------------------------------------
+aid (ayuds), shelf (estante)
+rails g scaffold aid info_shelf:tex_tarea --skip-stylesheets 
+
+rails g bootstrap:themed aid -f
+------------------------------------------------
+................................................
+
+defiicion de roles:
+-------------------------------------------------
+propuesto super_admin todos los privilegios 
+director -> todos los privilegios
+encargado -> registrar un aprendiz, registrar programa,  editar, ver, 

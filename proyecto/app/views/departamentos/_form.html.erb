@@ -1,0 +1,12 @@
+<%= simple_form_for(@departamento, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
+
+  <%= f.error_notification %>  
+
+  <%= f.input :nombre, :label => "Departamento",  :required => true %>
+
+  <%= f.input :pais_nombre, :url => autocomplete_pais_nombre_departamentos_path, :label =>"Pais", :as => :autocomplete %>
+  <div class="form-actions">
+    <%= f.submit "guardar", :class => 'btn btn-primary' %>
+    <%= link_to 'Atras', departamentos_path, :class => 'btn btn-small' %>
+  </div>
+<% end %>

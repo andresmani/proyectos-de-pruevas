@@ -1,0 +1,22 @@
+<%= simple_form_for(@instructor, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
+
+  <%= f.error_notification %>
+ 
+ <%= f.input :nombre, :label => "Nombre" %>
+  <%= f.input :apellido, :label => "Apellido" %>
+  <%= f.input :cedula, :label => "Cedula" %>
+  <%= f.input :email, :label => "Email" %>
+  <%= f.input :direccion, :label => "Direccion" %>
+   <%= f.input :telefono, :label => "Telefono" %>
+ <%= f.label :materia_id %>
+  <%= f.collection_select :materia_id, Materia.all, :id, :nombre %><br>
+
+  <div class="form-actions">
+    <%= f.submit "guardar", :class => 'btn btn-primary btn btn-small' %>
+    <%= link_to 'Atras', instructores_path, :class => 'btn btn-small' %>
+  </div>
+<% end %>
+
+
+
+
